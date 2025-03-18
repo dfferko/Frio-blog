@@ -1,0 +1,73 @@
+.blogDetails-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+.blogDetails-parallax {
+  height: clamp(400px, 4vh, 600px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+.blogDetails-content {
+  margin-top: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.blogDetails-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.category-badge {
+  display: inline-block;
+  background-color: #c94c7d;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blogDetails-title {
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.blogDetails-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #777;
+}
+
+.blogDetails-meta .date {
+  margin-right: 20px;
+  color: #a73868;
+}
+
+.blogDetails-text {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  letter-spacing: -0.3px;
+}
+.blogDetails-text ::first-letter {
+  font-size: 4rem;
+  line-height: 60px;
+  float: left;
+  font-weight: bold;
+  color: #333;
+}
