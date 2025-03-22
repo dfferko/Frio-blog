@@ -17,8 +17,16 @@ select {
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
+  appearance: base-select;
 }
-
+option:hover {
+  background-color: #f2f2f2;
+  color: #a73868;
+}
+option:checked {
+  background-color: #a73868;
+  color: white;
+}
 select:focus {
   border-color: #a73868;
   box-shadow: 0 0 0 2px rgba(167, 56, 104, 0.2);
@@ -80,12 +88,25 @@ select:focus {
 }
 
 .blog-subtitle {
+  --max-lines: 2;
+  --line-height: 1.5;
   font-size: 1rem;
   color: #666;
-  line-height: 1.5;
   margin-bottom: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  max-height: calc(var(--max-lines) * 1rem * var(--line-height));
+  line-height: var(--line-height);
 }
-
+.blog-subtitle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, #fff);
+  height: calc(2rem * var(--line-height));
+}
 .blog-link {
   color: #a73868;
   text-decoration: none;

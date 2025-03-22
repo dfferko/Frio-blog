@@ -1,12 +1,19 @@
 "use client";
 import "./globals.css";
 import BlogProvider, { useBlogContext } from "@/context/blogContext";
+import { useEffect } from "react";
 import Link from "next/link";
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  useEffect(() => {
+    document.title = "Frio blogs"
+  }, [])
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/heart-favicon.png" />
+      </head>
       <body>
         <BlogProvider>
           <AppContent>{children}</AppContent>

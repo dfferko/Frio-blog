@@ -62,7 +62,7 @@ export default function BlogPage() {
           </div>
           {relatedBlogs.length > 0 && (
             <>
-              <h1 className="nadpis">Podobné blogy</h1>
+              <div className="nadpis"><h1>Podobné blogy</h1></div>
               <div className="related-posts">
                 {relatedBlogs.map((relatedBlog) => (
                   <BlogCardComponent
